@@ -9,8 +9,7 @@ import { StoreDataService } from '../services/store-data.service';
   imports: [RouterOutlet,ButtonComponent,GetTempDataComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  standalone: true,
-  providers: [StoreDataService]
+  standalone: true
 })
 export class AppComponent {
   public storeDataService = inject(StoreDataService);

@@ -2,7 +2,7 @@ import { computed, Injectable, signal } from '@angular/core';
 
 @Injectable()
 export class StoreDataService {
-  private storage = signal({resp:''});
+  private storage = signal({resp:[]});
 
   public data = computed(()=>this.storage())
 

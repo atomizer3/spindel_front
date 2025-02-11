@@ -3,4 +3,15 @@
 <app-get-temp-data></app-get-temp-data>
 
 <p>Odpowiedź: </p>
-<div>{{storeDataService.data()?.resp ?? 'Nimo'}}</div>
+<!-- <div>{{storeDataService.data()?.resp ?? 'Nimo'}}</div> -->
+
+
+@for (item of storeDataService.data()?.resp; track item) {
+    <p>{{item['ID']}} temperatura wynosi po ludzku {{item['TEMP_VALUE']}}</p>
+
+
+}
+
+
+
+

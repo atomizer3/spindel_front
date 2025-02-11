@@ -5,8 +5,7 @@ import { StoreDataService } from '../../services/store-data.service';
   selector: 'app-get-temp-data',
   templateUrl: './get-temp-data.component.html',
   styleUrl: './get-temp-data.component.scss',
-  standalone: true,
-  providers: [StoreDataService]
+  standalone: true
 })
 export class GetTempDataComponent {
     private storeDataService = inject(StoreDataService)
