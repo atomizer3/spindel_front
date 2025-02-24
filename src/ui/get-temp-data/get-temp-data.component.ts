@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { StoreDataService } from '../../services/store-data.service';
+import { AlcoData, StoreDataService } from '../../services/store-data.service';
 
 @Component({
   selector: 'app-get-temp-data',
@@ -12,6 +12,6 @@ export class GetTempDataComponent {
 
     public async getData(){
         const response = await fetch('http://localhost:3000', {method:'GET'})
-        this.storeDataService.insertData(await response.json());
+        this.storeDataService.insertData(await response.json() as AlcoData[]);
     }
 }
